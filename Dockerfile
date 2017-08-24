@@ -31,5 +31,7 @@ RUN install2.r --error rJava stringi R.utils mailR xts xlsx \
 	plyr jsonlite quantmod \
   && rm -rf /tmp/* /var/tmp/*
 
-RUN mkdir /code
-VOLUME /code
+RUN mkdir -p /cipher/cloud
+VOLUME /cipher/cloud
+
+ENV SAAS_R_HOME /cipher/cloud
